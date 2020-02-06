@@ -8,15 +8,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Colors.blue),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Hello Flutter'),
-        ),
-        body: Container(
-          color: Colors.white,
-        ),
-        drawer: Container(color: Colors.yellow),
-        floatingActionButton: FloatingActionButton(onPressed: (){}),
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Hello Flutter'),
+        centerTitle: true,
+      ),
+      body: Container(
+        color: Colors.red,
       ),
     );
   }
