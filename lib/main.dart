@@ -8,8 +8,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Colors.blue),
-      home: Container(
-        color: Colors.white,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Hello Flutter'),
+        ),
+        body: Container(
+          color: Colors.white,
+        ),
+        drawer: Container(color: Colors.yellow),
+        floatingActionButton: FloatingActionButton(onPressed: (){}),
       ),
     );
   }
